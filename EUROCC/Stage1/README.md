@@ -21,6 +21,7 @@
 6. 	From the getPics.py file, images can be taken for each analysis on systems with Paraview installed.
 
 
-![opt111](https://user-images.githubusercontent.com/90314532/132521670-568a35da-c564-4978-bea5-a6d4ac5a70ca.jpg)
+![Optimization of the baffle slot dimensions used in Contact Tanks](https://user-images.githubusercontent.com/90314532/132671140-9f703918-b685-4813-95da-0d274da2dcfa.gif)
+
 
 
