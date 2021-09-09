@@ -1,4 +1,7 @@
 # EUROCC Phase 1 (Slot size optimization with variation of diagonal length)
+
+![DSTECH-logo](https://user-images.githubusercontent.com/90314532/132682366-664c2931-7125-48c2-b718-297c01406d80.jpg)
+
  
                                                         GENERAL DESCRIPTIONS
 
