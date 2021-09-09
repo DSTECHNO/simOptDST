@@ -1,9 +1,7 @@
 # EUROCC Phase 1 (Slot size optimization with variation of diagonal length)
 
-![DSTECH-logo](https://user-images.githubusercontent.com/90314532/132682366-664c2931-7125-48c2-b718-297c01406d80.jpg)
-
  
-                                                        GENERAL DESCRIPTIONS
+ --------------------------GENERAL DESCRIPTIONS------------------------------
 
 1. 	In order to run the system, the Allrun.pre file in the casebase must be run first for the blockMesh process. 
 	If there are no geometry and mesh changes, there is no need to rerun.
@@ -26,6 +24,9 @@
 7.	It is necessary to use dakota_cleanup file to delete all optimization results.
 
 ![Optimization of the baffle slot dimensions used in Contact Tanks](https://user-images.githubusercontent.com/90314532/132671140-9f703918-b685-4813-95da-0d274da2dcfa.gif)
+
+                                                     ![DSTECH-logo](https://user-images.githubusercontent.com/90314532/132682478-1a04cb6b-4f4d-4901-9f21-dbfdcaf12274.jpg)
+
 
 
 
