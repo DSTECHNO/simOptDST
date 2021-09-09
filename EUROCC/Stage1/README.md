@@ -1,9 +1,4 @@
-# EUROCC Phase 1 (Slot size optimization with variation of diagonal length)
-
-Design and Simulation Technologies Inc. (DSTECH)
-    
-http://dstechno.net/
-                                      
+# EUROCC Phase 1 (Slot size optimization with variation of diagonal length)                                 
  
 							GENERAL DESCRIPTIONS
 
@@ -28,3 +23,8 @@ http://dstechno.net/
 7.	It is necessary to use dakota_cleanup file to delete all optimization results.
 
 ![Optimization of the baffle slot dimensions used in Contact Tanks](https://user-images.githubusercontent.com/90314532/132671140-9f703918-b685-4813-95da-0d274da2dcfa.gif)
+
+
+Design and Simulation Technologies Inc. (DSTECH)
+    
+http://dstechno.net/
