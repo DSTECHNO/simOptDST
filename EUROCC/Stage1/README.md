@@ -5,7 +5,7 @@ Design and Simulation Technologies Inc. (DSTECH)
 http://dstechno.net/
                                       
  
-	GENERAL DESCRIPTIONS
+							GENERAL DESCRIPTIONS
 
 1. 	In order to run the system, the Allrun.pre file in the casebase must be run first for the blockMesh process. 
 	If there are no geometry and mesh changes, there is no need to rerun.
