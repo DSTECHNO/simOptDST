@@ -1,16 +1,16 @@
 # EUROCC Phase 1 (Slot size optimization with variation of diagonal length)
 
-    Design and Simulation Technologies Inc. (DSTECH)
+Design and Simulation Technologies Inc. (DSTECH)
     
-    http://dstechno.net/
+http://dstechno.net/
     
         
- _____   _____ _______ ______ _____ _    _ 
-|  __ \ / ____|__   __|  ____/ ____| |  | |
-| |  | | (___    | |  | |__ | |    | |__| |
-| |  | |\___ \   | |  |  __|| |    |  __  |
-| |__| |____) |  | |  | |___| |____| |  | |
-|_____/|_____/   |_|  |______\_____|_|  |_|
+  _____   _____ _______ ______ _____ _    _ 
+ |  __ \ / ____|__   __|  ____/ ____| |  | |
+ | |  | | (___    | |  | |__ | |    | |__| |
+ | |  | |\___ \   | |  |  __|| |    |  __  |
+ | |__| |____) |  | |  | |___| |____| |  | |
+ |_____/|_____/   |_|  |______\_____|_|  |_|
                                       
  
 GENERAL DESCRIPTIONS
