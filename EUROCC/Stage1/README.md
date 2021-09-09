@@ -1,5 +1,19 @@
 # EUROCC Phase 1 (Slot size optimization with variation of diagonal length)
 
+Author:
+    Design and Simulation Technologies Inc. (DSTECH)
+    http://dstechno.net/
+    
+![DSTECH-logo](https://user-images.githubusercontent.com/90314532/132682818-8f73eb73-3011-4087-acaa-628d57684561.jpg)
+         
+      _____   _____ _______ ______ _____ _    _ 
+     |  __ \ / ____|__   __|  ____/ ____| |  | |
+     | |  | | (___    | |  | |__ | |    | |__| |
+     | |  | |\___ \   | |  |  __|| |    |  __  |
+     | |__| |____) |  | |  | |___| |____| |  | |
+     |_____/|_____/   |_|  |______\_____|_|  |_|
+                                      
+\*---------------------------------------------------------------------------*/
  
 GENERAL DESCRIPTIONS
 
@@ -24,10 +38,3 @@ GENERAL DESCRIPTIONS
 7.	It is necessary to use dakota_cleanup file to delete all optimization results.
 
 ![Optimization of the baffle slot dimensions used in Contact Tanks](https://user-images.githubusercontent.com/90314532/132671140-9f703918-b685-4813-95da-0d274da2dcfa.gif)
-
-![DSTECH-logo](https://user-images.githubusercontent.com/90314532/132682532-e898c527-3a49-4c42-b60c-678b7ebcedb8.jpg)
-
-
-
-
-
