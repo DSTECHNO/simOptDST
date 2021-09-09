@@ -25,7 +25,8 @@
 
 ![Optimization of the baffle slot dimensions used in Contact Tanks](https://user-images.githubusercontent.com/90314532/132671140-9f703918-b685-4813-95da-0d274da2dcfa.gif)
 
-                                                     ![DSTECH-logo](https://user-images.githubusercontent.com/90314532/132682478-1a04cb6b-4f4d-4901-9f21-dbfdcaf12274.jpg)
+![DSTECH-logo](https://user-images.githubusercontent.com/90314532/132682532-e898c527-3a49-4c42-b60c-678b7ebcedb8.jpg)
+
 
 
 
