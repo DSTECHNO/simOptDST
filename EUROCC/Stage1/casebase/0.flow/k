@@ -1,0 +1,101 @@
+/*--------------------------------*- C++ -*----------------------------------*\
+| =========                 |                                                 |
+| \\      /  F ield         | OpenFOAM: The Open Source CFD Toolbox           |
+|  \\    /   O peration     | Version:  4.1                                   |
+|   \\  /    A nd           | Web:      www.OpenFOAM.org                      |
+|    \\/     M anipulation  |                                                 |
+\*---------------------------------------------------------------------------*/
+FoamFile
+{
+    version     2.0;
+    format      ascii;
+    class       volScalarField;
+    location    "0";
+    object      k;
+}
+// * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * //
+
+dimensions      [0 2 -2 0 0 0 0];
+
+internalField   uniform 3e-06;
+
+boundaryField
+{
+    inlet
+    {
+        type            mapped;
+        field           k;
+        setAverage      0;
+        average         1e-12;
+        interpolationScheme cell;
+        value           uniform 1e-12;
+    }
+    outlet
+    {
+        type            inletOutlet;
+        inletValue      uniform 1e-12;
+        value           uniform 1e-12;
+    }
+    top
+    {
+        type            symmetryPlane;
+    }
+    bottom
+    {
+        type            kqRWallFunction;
+        value           uniform 3e-06;
+    }
+    bf1_left
+    {
+        type            kqRWallFunction;
+        value           uniform 3e-06;
+    }
+    bf1_right
+    {
+        type            kqRWallFunction;
+        value           uniform 3e-06;
+    }
+    bf2_left
+    {
+        type            kqRWallFunction;
+        value           uniform 3e-06;
+    }
+    bf2_right
+    {
+        type            kqRWallFunction;
+        value           uniform 3e-06;
+    }
+    bf3_left
+    {
+        type            kqRWallFunction;
+        value           uniform 3e-06;
+    }
+    bf3_right
+    {
+        type            kqRWallFunction;
+        value           uniform 3e-06;
+    }
+    back
+    {
+        type            kqRWallFunction;
+        value           uniform 3e-06;
+    }
+    front
+    {
+        type            kqRWallFunction;
+        value           uniform 3e-06;
+    }
+    walls
+    {
+        type            kqRWallFunction;
+        value           uniform 3e-06;
+    }
+    baffles
+    {
+        type            kqRWallFunction;
+        value           uniform 3e-06;
+    }
+}
+
+
+// ************************************************************************* //

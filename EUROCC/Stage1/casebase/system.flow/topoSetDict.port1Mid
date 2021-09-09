@@ -1,0 +1,96 @@
+/*--------------------------------*- C++ -*----------------------------------*\
+| =========                 |                                                 |
+| \\      /  F ield         | OpenFOAM: The Open Source CFD Toolbox           |
+|  \\    /   O peration     | Version:  2.4.0                                 |
+|   \\  /    A nd           | Web:      www.OpenFOAM.org                      |
+|    \\/     M anipulation  |                                                 |
+\*---------------------------------------------------------------------------*/
+FoamFile
+{
+    version     2.0;
+    format      ascii;
+    class       dictionary;
+    location    "system";
+    object      topoSetDict;
+}
+// * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * //
+#include        "ports/portscoords"
+
+actions
+(
+    {
+        name    port11Mid;
+        type    faceSet;
+        action  new;
+        source  boxToFace;
+        sourceInfo
+        {
+            box (0.1233 $y11 $z11)(0.1239 $y12 $z12);
+        }
+    }
+
+    {
+        name    port11Mid;
+        type    faceSet;
+        action  delete;
+        source  normalToFace;
+        sourceInfo
+        {
+            normal (0 0 1);
+	    cos 0.01;
+        }
+    }
+
+    {
+        name    port11Mid;
+        type    faceSet;
+        action  delete;
+        source  normalToFace;
+        sourceInfo
+        {
+            normal (0 0 -1);
+	    cos 0.01;
+        }
+    }
+
+    {
+        name    port11Mid;
+        type    faceSet;
+        action  delete;
+        source  normalToFace;
+        sourceInfo
+        {
+            normal (0 -1 0);
+	    cos 0.01;
+        }
+    }
+
+    {
+        name    port11Mid;
+        type    faceSet;
+        action  delete;
+        source  normalToFace;
+        sourceInfo
+        {
+            normal (0 1 0);
+	    cos 0.01;
+        }
+    }
+
+    {
+        name    port1Mid;
+        type    faceZoneSet;
+        action  new;
+        source  setToFaceZone;
+        sourceInfo
+        {
+            faceSet port11Mid;
+        }
+    }
+
+
+
+
+);
+
+// ************************************************************************* //
