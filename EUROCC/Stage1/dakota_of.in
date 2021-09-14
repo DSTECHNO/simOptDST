@@ -25,11 +25,11 @@ method
   
 ################################################################################
 variables
-	continuous_design = 2
-	cdv_initial_point    0.93	0.93     
-	cdv_lower_bounds     0.1	0.1    
-	cdv_upper_bounds     0.93	0.93     
-	cdv_descriptor       'x1'	'x2'     
+	continuous_design = 1
+	cdv_initial_point    0.93
+	cdv_lower_bounds     0.1
+	cdv_upper_bounds     0.93   
+	cdv_descriptor       'x1'    
 ################################################################################
 
 

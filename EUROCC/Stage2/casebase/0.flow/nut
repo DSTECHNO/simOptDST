@@ -1,0 +1,101 @@
+/*--------------------------------*- C++ -*----------------------------------*\
+| =========                 |                                                 |
+| \\      /  F ield         | OpenFOAM: The Open Source CFD Toolbox           |
+|  \\    /   O peration     | Version:  4.1                                   |
+|   \\  /    A nd           | Web:      www.OpenFOAM.org                      |
+|    \\/     M anipulation  |                                                 |
+\*---------------------------------------------------------------------------*/
+FoamFile
+{
+    version     2.0;
+    format      ascii;
+    class       volScalarField;
+    location    "0";
+    object      nut;
+}
+// * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * //
+
+dimensions      [0 2 -1 0 0 0 0];
+
+internalField   uniform 0;
+
+boundaryField
+{
+    inlet
+    {
+        type            mapped;
+        field           nut;
+        setAverage      0;
+        average         1e-12;
+        interpolationScheme cell;
+        value           uniform 1e-12;
+    }
+    outlet
+    {
+        type            inletOutlet;
+        inletValue      uniform 1e-12;
+        value           uniform 1e-12;
+    }
+    top
+    {
+        type            symmetryPlane;
+    }
+    bottom
+    {
+        type            nutkWallFunction;
+        value           uniform 0;
+    }
+    bf1_left
+    {
+        type            nutkWallFunction;
+        value           uniform 0;
+    }
+    bf1_right
+    {
+        type            nutkWallFunction;
+        value           uniform 0;
+    }
+    bf2_left
+    {
+        type            nutkWallFunction;
+        value           uniform 0;
+    }
+    bf2_right
+    {
+        type            nutkWallFunction;
+        value           uniform 0;
+    }
+    bf3_left
+    {
+        type            nutkWallFunction;
+        value           uniform 0;
+    }
+    bf3_right
+    {
+        type            nutkWallFunction;
+        value           uniform 0;
+    }
+    back
+    {
+        type            nutkWallFunction;
+        value           uniform 0;
+    }
+    front
+    {
+        type            nutkWallFunction;
+        value           uniform 0;
+    }
+    walls
+    {
+        type            nutkWallFunction;
+        value           uniform 0;
+    }
+    baffles
+    {
+        type            nutkWallFunction;
+        value           uniform 0;
+    }
+}
+
+
+// ************************************************************************* //

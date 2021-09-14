@@ -1,0 +1,41 @@
+/*--------------------------------*- C++ -*----------------------------------*\
+| =========                 |                                                 |
+| \\      /  F ield         | OpenFOAM: The Open Source CFD Toolbox           |
+|  \\    /   O peration     | Version:  2.3.1                                 |
+|   \\  /    A nd           | Web:      www.OpenFOAM.org                      |
+|    \\/     M anipulation  |                                                 |
+\*---------------------------------------------------------------------------*/
+//centers
+y1 0.07;
+y2 0.105;
+y3 0.14;
+z 0.115;
+increment 0.93;
+changesy #calc "0.0175*$increment";
+changesz #calc "0.1073333*$increment";
+
+y11	#calc "$y1-$changesy";
+z11	#calc "$z-$changesz";
+y12	#calc "$y1+$changesy";
+z12	#calc "$z+$changesz";
+y21	#calc "$y2-$changesy";
+z21	#calc "$z-$changesz";
+y22	#calc "$y2+$changesy";
+z22	#calc "$z+$changesz";
+y31	#calc "$y3-$changesy";
+z31	#calc "$z-$changesz";
+y32	#calc "$y3+$changesy";
+z32	#calc "$z+$changesz";
+my11	#calc "$y11-0.01";
+mz11	#calc "$z11-0.01";
+my12	#calc "$y32+0.01";
+mz12	#calc "$z32+0.01";
+
+
+
+
+
+
+
+
+// ************************************************************************* //

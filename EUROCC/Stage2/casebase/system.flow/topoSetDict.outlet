@@ -1,0 +1,95 @@
+/*--------------------------------*- C++ -*----------------------------------*\
+| =========                 |                                                 |
+| \\      /  F ield         | OpenFOAM: The Open Source CFD Toolbox           |
+|  \\    /   O peration     | Version:  2.4.0                                 |
+|   \\  /    A nd           | Web:      www.OpenFOAM.org                      |
+|    \\/     M anipulation  |                                                 |
+\*---------------------------------------------------------------------------*/
+FoamFile
+{
+    version     2.0;
+    format      ascii;
+    class       dictionary;
+    location    "system";
+    object      topoSetDict;
+}
+// * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * //
+
+actions
+(
+    {
+        name    meas-outlet1;
+        type    faceSet;
+        action  new;
+        source  boxToFace;
+        sourceInfo
+        {
+            box (0.4829 -0.02 -0.03)(0.4831 0.05 0.25);
+        }
+    }
+
+    {
+        name    meas-outlet1;
+        type    faceSet;
+        action  delete;
+        source  normalToFace;
+        sourceInfo
+        {
+            normal (0 0 1);
+	    cos 0.01;
+        }
+    }
+
+    {
+        name    meas-outlet1;
+        type    faceSet;
+        action  delete;
+        source  normalToFace;
+        sourceInfo
+        {
+            normal (0 0 -1);
+	    cos 0.01;
+        }
+    }
+
+    {
+        name    meas-outlet1;
+        type    faceSet;
+        action  delete;
+        source  normalToFace;
+        sourceInfo
+        {
+            normal (0 -1 0);
+	    cos 0.01;
+        }
+    }
+
+    {
+        name    meas-outlet1;
+        type    faceSet;
+        action  delete;
+        source  normalToFace;
+        sourceInfo
+        {
+            normal (0 1 0);
+	    cos 0.01;
+        }
+    }
+
+    {
+        name    meas-outlet;
+        type    faceZoneSet;
+        action  new;
+        source  setToFaceZone;
+        sourceInfo
+        {
+            faceSet meas-outlet1;
+        }
+    }
+
+
+
+
+);
+
+// ************************************************************************* //
