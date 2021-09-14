@@ -1,4 +1,4 @@
-# EUROCC Phase 1 (Slot size optimization with variation of diagonal length)                                 
+# EUROCC Phase 2 (Optimization for slot width and slot height separately)                                 
  
 							GENERAL DESCRIPTIONS
 
@@ -24,7 +24,7 @@
 
 
 
-![Optimization of the baffle slot dimensions used in Contact Tanks](https://user-images.githubusercontent.com/90314532/132671140-9f703918-b685-4813-95da-0d274da2dcfa.gif)
+![Phase2](https://user-images.githubusercontent.com/90314532/133221259-5f75a5c5-db23-436b-8aae-aed7b756dcef.gif)
 
 
 Design and Simulation Technologies Inc. (DSTECH)
