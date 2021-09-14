@@ -8,7 +8,7 @@
 #SBATCH --workdir=/truba/home/mkuzay/CfdSim/SlotOpt/optimization1
 #SBATCH --output=/truba/home/mkuzay/CfdSim/SlotOpt/optimization1/slurm-%j.out
 #SBATCH --error=/truba/home/mkuzay/CfdSim/SlotOpt/optimization1/slurm-%j.err
-#SBATCH --mail-user=mkuzaay3@gmail.com
+#SBATCH --mail-user=
 #SBATCH --mail-type=ALL
 
 source $HOME/OpenFOAM/OpenFOAM-4.1/etc/bashrc WM_LABEL_SIZE=64 WM_COMPILER_TYPE=ThirdParty FOAMY_HEX_MESH=yes
