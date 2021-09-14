@@ -1,2 +1,1 @@
-# EUROCC
-
+# EUROCC Case Study
