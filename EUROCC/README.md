@@ -1,4 +1,4 @@
-![EuroCC_Truba_logo](https://user-images.githubusercontent.com/30440239/133420677-abfdb56f-3965-44de-8f91-a70edaf35c80.png)
+![logos](https://user-images.githubusercontent.com/30440239/133421092-b6e22afc-0e28-4d0e-9c64-f1294ed0bbbe.png)
 
 # EUROCC Case Study: Simulation-Optimization of a Patented Design with Parallel Computing on TRUBA cluster
 
