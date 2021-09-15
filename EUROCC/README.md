@@ -6,6 +6,8 @@ In the scope of this case study, DSTECH intends to first optimize a design paten
 
 Treatment of surface waters in large cities has been emerged as a critical point of interest for governments in recent years with increasing clean water demand and development of energy intensive water treatment technologies such as ozone and ultraviolet. Raw water is mixed with the disinfectant in a multi-chambered contact tank at the last stage of the treatment procedure to remove viruses and pathogens from the water. Although an efficient contact system is required for the effective disinfection of water with less disinfectant and energy usage, conventional mixing systems suffer from low mixing and high energy requirements due to the recirculation effects and short-circuiting occurred inside the chambers. 
 
+![Fig2](https://user-images.githubusercontent.com/30440239/133421811-fb222117-abad-41dc-bee5-71f01833d082.png)
+
 Optimization of the baffle slot dimensions used in Contact Tanks
 
 Stage1: Slot size optimization with variation of diagonal length (both y and z direction)
