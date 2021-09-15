@@ -16,14 +16,16 @@
 	In order to calculate the Morrill Index, the objective function value is determined with the help of the EF.py file in the casebase. 
 	This objective function value (|2-Morrill Index|) is minimized by bringing it closer to 0. Thus, the efficiency of the system is optimized.
 
-5. 	For the optimization process in Dakota, a new folder will be created for each new solution step by copying the casebase with the loop in the dakota.s file at every stage.
+5. 	For the optimization process in Dakota, a new folder will be created for each new solution step by copying the casebase with the loop in the dakota.s file at every 	stage.
 
 6. 	From the getPics.py file, images can be taken for each analysis on systems with Paraview installed.
 
 7.	It is necessary to use dakota_cleanup file to delete all optimization results.
 
 
-
+In the third phase, a total of six variables were optimized, including three-variable optimization in the y-axis and three-variable optimization in the z-axis. In addition optimization was made for the placement of the slots based on the width and height values in the second phase.
+In the first step of the third phase, the slots in the z-axis are kept constant and the placement of the slots in the y-axis is optimized.
+In the second step, optimization was made in the z-axis according to the results obtained from the y-axis.
 
 Design and Simulation Technologies Inc. (DSTECH)
     
