@@ -1,7 +1,7 @@
 #!/bin/bash 
 #SBATCH -p hamsi
 #SBATCH -A eurocc7
-#SBATCH -J SlotOpt
+#SBATCH -J SlotOpt_y_axis
 #SBATCH -N 2
 #SBATCH --ntasks-per-node=56
 #SBATCH --time=03-00:00:0
