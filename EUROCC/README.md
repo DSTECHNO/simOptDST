@@ -2,7 +2,9 @@
 
 # EUROCC Case Study: Simulation-Optimization of a Patented Design with Parallel Computing on TRUBA cluster
 
-In the scope of this case study, DSTECH intends to first optimize a design patented by EPO (European Patent Office) for the efficiency enhancement of a mixing system used in potable water treatment plants (Aral and Demirel, 2019). Definition of the problem, solution strategy and proposed optimization procedure are identified in this document.
+In the scope of this case study, DSTECH intends to first optimize a design patented by EPO (European Patent Office) for the efficiency enhancement of a mixing system used in potable water treatment plants (Aral and Demirel, 2019). 
+
+Treatment of surface waters in large cities has been emerged as a critical point of interest for governments in recent years with increasing clean water demand and development of energy intensive water treatment technologies such as ozone and ultraviolet. Raw water is mixed with the disinfectant in a multi-chambered contact tank at the last stage of the treatment procedure to remove viruses and pathogens from the water. Although an efficient contact system is required for the effective disinfection of water with less disinfectant and energy usage, conventional mixing systems suffer from low mixing and high energy requirements due to the recirculation effects and short-circuiting occurred inside the chambers. 
 
 Optimization of the baffle slot dimensions used in Contact Tanks
 
