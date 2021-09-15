@@ -1,4 +1,4 @@
-# EUROCC Case Study
+# EUROCC Case Study: Simulation-Optimization of a Patented Design with Parallel Computing on TRUBA cluster
 
 
 Optimization of the baffle slot dimensions used in Contact Tanks
