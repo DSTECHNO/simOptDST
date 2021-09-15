@@ -1,0 +1,101 @@
+/*--------------------------------*- C++ -*----------------------------------*\
+| =========                 |                                                 |
+| \\      /  F ield         | OpenFOAM: The Open Source CFD Toolbox           |
+|  \\    /   O peration     | Version:  4.1                                   |
+|   \\  /    A nd           | Web:      www.OpenFOAM.org                      |
+|    \\/     M anipulation  |                                                 |
+\*---------------------------------------------------------------------------*/
+FoamFile
+{
+    version     2.0;
+    format      ascii;
+    class       volVectorField;
+    location    "0";
+    object      U;
+}
+// * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * //
+
+dimensions      [0 1 -1 0 0 0 0];
+
+internalField   uniform (0 0 0);
+
+boundaryField
+{
+    inlet
+    {
+        type            mapped;
+        field           U;
+        setAverage      1;
+        average         (0.02923 0 0);
+        interpolationScheme cell;
+        value           uniform (0 0 0);
+    }
+    outlet
+    {
+        type            inletOutlet;
+        inletValue      uniform (0 0 0);
+        value           uniform (0 0 0);
+    }
+    top
+    {
+        type            symmetryPlane;
+    }
+    bottom
+    {
+        type            fixedValue;
+        value           uniform (0 0 0);
+    }
+    bf1_left
+    {
+        type            fixedValue;
+        value           uniform (0 0 0);
+    }
+    bf1_right
+    {
+        type            fixedValue;
+        value           uniform (0 0 0);
+    }
+    bf2_left
+    {
+        type            fixedValue;
+        value           uniform (0 0 0);
+    }
+    bf2_right
+    {
+        type            fixedValue;
+        value           uniform (0 0 0);
+    }
+    bf3_left
+    {
+        type            fixedValue;
+        value           uniform (0 0 0);
+    }
+    bf3_right
+    {
+        type            fixedValue;
+        value           uniform (0 0 0);
+    }
+    back
+    {
+        type            fixedValue;
+        value           uniform (0 0 0);
+    }
+    front
+    {
+        type            fixedValue;
+        value           uniform (0 0 0);
+    }
+    walls
+    {
+        type            fixedValue;
+        value           uniform (0 0 0);
+    }
+    baffles
+    {
+        type            fixedValue;
+        value           uniform (0 0 0);
+    }
+}
+
+
+// ************************************************************************* //

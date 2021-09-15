@@ -1,0 +1,54 @@
+/*--------------------------------*- C++ -*----------------------------------*\
+| =========                 |                                                 |
+| \\      /  F ield         | OpenFOAM: The Open Source CFD Toolbox           |
+|  \\    /   O peration     | Version:  2.3.1                                 |
+|   \\  /    A nd           | Web:      www.OpenFOAM.org                      |
+|    \\/     M anipulation  |                                                 |
+\*---------------------------------------------------------------------------*/
+FoamFile
+{
+    version     2.0;
+    format      ascii;
+    class       dictionary;
+    object      topoSetDict;
+}
+// * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * //
+#include        "ports/portscoords"
+//mesh refinement in the vicinity of the baffles
+actions
+(
+    {
+        name    baffle1ref;
+        type    cellSet;
+        action  new;
+        source  boxToCell;
+        sourceInfo
+        {
+            box (0.11 $my11 $mz11) (0.137 $my12 $mz12);
+        }
+    }
+
+    {
+        name    baffle1ref;
+        type    cellSet;
+        action  add;
+        source  boxToCell;
+        sourceInfo
+        {
+            box (0.23 $my11 $mz11) (0.257 $my12 $mz12);
+        }
+    }
+
+    {
+        name    baffle1ref;
+        type    cellSet;
+        action  add;
+        source  boxToCell;
+        sourceInfo
+        {
+            box (0.35 $my11 $mz11) (0.377 $my12 $mz12);
+        }
+    }
+);
+
+// ************************************************************************* //

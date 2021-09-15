@@ -1,0 +1,15 @@
+#!/bin/sh
+cd ${0%/*} || exit 1    # run from this directory
+
+# Source tutorial clean functions
+. $WM_PROJECT_DIR/bin/tools/CleanFunctions
+
+    cleanCase
+    rm -rf constant/polyMesh/boundary
+    rm -rf system/topoSetDict
+    rm -rf *.obj
+
+rm -r *pycache* 0/ $(foamListTimes) system/ dynamic* postP* proc* automized.png *.txt *.plt slurm* cells
+
+
+# ----------------------------------------------------------------- end-of-file

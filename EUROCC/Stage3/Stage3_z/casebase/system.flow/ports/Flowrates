@@ -1,0 +1,261 @@
+/*--------------------------------*- C++ -*----------------------------------*\
+| =========                 |                                                 |
+| \\      /  F ield         | OpenFOAM: The Open Source CFD Toolbox           |
+|  \\    /   O peration     | Version:  2.3.1                                 |
+|   \\  /    A nd           | Web:      www.OpenFOAM.org                      |
+|    \\/     M anipulation  |                                                 |
+\*---------------------------------------------------------------------------*/
+    
+    Q_Outlet  // Name also used to identify output folder
+    {
+        type            faceSource;
+        functionObjectLibs ("libfieldFunctionObjects.so");
+        enabled         true;
+        outputControl   timeStep;
+        outputInterval  1;
+        log             true;
+        valueOutput     false;
+        source          patch;  // Type of face source: faceZone, patch
+        sourceName      outlet;
+        operation       sum;
+        fields
+        (
+            phi
+        );
+    }
+
+    Q_Inlet  // Name also used to identify output folder
+    {
+        type            faceSource;
+        functionObjectLibs ("libfieldFunctionObjects.so");
+        enabled         true;
+        outputControl   timeStep;
+        outputInterval  1;
+        log             true;
+        valueOutput     false;
+        source          patch;  // Type of face source: faceZone, patch
+        sourceName      inlet;
+        operation       sum;
+        fields
+        (
+            phi
+        );
+    }
+
+
+    //calculate flux at the middle of each port    
+    Q_port1Mid  // Name also used to identify output folder
+    {
+        type            faceSource;
+        functionObjectLibs ("libfieldFunctionObjects.so");
+        enabled         true;
+        outputControl   timeStep;
+        outputInterval  1;
+        log             true;
+        valueOutput     false;
+        source          faceZone;  // Type of face source: faceZone, patch
+        sourceName      port1Mid;
+        operation       sum;
+        fields
+        (
+            phi
+        );
+    }
+
+    Q_port2Mid  // Name also used to identify output folder
+    {
+        type            faceSource;
+        functionObjectLibs ("libfieldFunctionObjects.so");
+        enabled         true;
+        outputControl   timeStep;
+        outputInterval  1;
+        log             true;
+        valueOutput     false;
+        source          faceZone;  // Type of face source: faceZone, patch
+        sourceName      port2Mid;
+        operation       sum;
+        fields
+        (
+            phi
+        );
+    }
+
+    Q_port3Mid  // Name also used to identify output folder
+    {
+        type            faceSource;
+        functionObjectLibs ("libfieldFunctionObjects.so");
+        enabled         true;
+        outputControl   timeStep;
+        outputInterval  1;
+        log             true;
+        valueOutput     false;
+        source          faceZone;  // Type of face source: faceZone, patch
+        sourceName      port3Mid;
+        operation       sum;
+        fields
+        (
+            phi
+        );
+    }
+
+    Q_port4Mid  // Name also used to identify output folder
+    {
+        type            faceSource;
+        functionObjectLibs ("libfieldFunctionObjects.so");
+        enabled         true;
+        outputControl   timeStep;
+        outputInterval  1;
+        log             true;
+        valueOutput     false;
+        source          faceZone;  // Type of face source: faceZone, patch
+        sourceName      port4Mid;
+        operation       sum;
+        fields
+        (
+            phi
+        );
+    }
+
+    Q_port5Mid  // Name also used to identify output folder
+    {
+        type            faceSource;
+        functionObjectLibs ("libfieldFunctionObjects.so");
+        enabled         true;
+        outputControl   timeStep;
+        outputInterval  1;
+        log             true;
+        valueOutput     false;
+        source          faceZone;  // Type of face source: faceZone, patch
+        sourceName      port5Mid;
+        operation       sum;
+        fields
+        (
+            phi
+        );
+    }
+
+    Q_port6Mid  // Name also used to identify output folder
+    {
+        type            faceSource;
+        functionObjectLibs ("libfieldFunctionObjects.so");
+        enabled         true;
+        outputControl   timeStep;
+        outputInterval  1;
+        log             true;
+        valueOutput     false;
+        source          faceZone;  // Type of face source: faceZone, patch
+        sourceName      port6Mid;
+        operation       sum;
+        fields
+        (
+            phi
+        );
+    }
+
+    Q_port7Mid  // Name also used to identify output folder
+    {
+        type            faceSource;
+        functionObjectLibs ("libfieldFunctionObjects.so");
+        enabled         true;
+        outputControl   timeStep;
+        outputInterval  1;
+        log             true;
+        valueOutput     false;
+        source          faceZone;  // Type of face source: faceZone, patch
+        sourceName      port7Mid;
+        operation       sum;
+        fields
+        (
+            phi
+        );
+    }
+
+    Q_port8Mid  // Name also used to identify output folder
+    {
+        type            faceSource;
+        functionObjectLibs ("libfieldFunctionObjects.so");
+        enabled         true;
+        outputControl   timeStep;
+        outputInterval  1;
+        log             true;
+        valueOutput     false;
+        source          faceZone;  // Type of face source: faceZone, patch
+        sourceName      port8Mid;
+        operation       sum;
+        fields
+        (
+            phi
+        );
+    }
+
+    Q_port9Mid  // Name also used to identify output folder
+    {
+        type            faceSource;
+        functionObjectLibs ("libfieldFunctionObjects.so");
+        enabled         true;
+        outputControl   timeStep;
+        outputInterval  1;
+        log             true;
+        valueOutput     false;
+        source          faceZone;  // Type of face source: faceZone, patch
+        sourceName      port9Mid;
+        operation       sum;
+        fields
+        (
+            phi
+        );
+    }
+
+    Q_opening1Mid  // Name also used to identify output folder
+    {
+        type            faceSource;
+        functionObjectLibs ("libfieldFunctionObjects.so");
+        enabled         true;
+        outputControl   timeStep;
+        outputInterval  1;
+        log             true;
+        valueOutput     false;
+        source          faceZone;  // Type of face source: faceZone, patch
+        sourceName      open1Mid;
+        operation       sum;
+        fields
+        (
+            phi
+        );
+    }
+
+    Q_opening2Mid  // Name also used to identify output folder
+    {
+        type            faceSource;
+        functionObjectLibs ("libfieldFunctionObjects.so");
+        enabled         true;
+        outputControl   timeStep;
+        outputInterval  1;
+        log             true;
+        valueOutput     false;
+        source          faceZone;  // Type of face source: faceZone, patch
+        sourceName      open2Mid;
+        operation       sum;
+        fields
+        (
+            phi
+        );
+    }
+
+    Q_opening3Mid  // Name also used to identify output folder
+    {
+        type            faceSource;
+        functionObjectLibs ("libfieldFunctionObjects.so");
+        enabled         true;
+        outputControl   timeStep;
+        outputInterval  1;
+        log             true;
+        valueOutput     false;
+        source          faceZone;  // Type of face source: faceZone, patch
+        sourceName      open3Mid;
+        operation       sum;
+        fields
+        (
+            phi
+        );
+    }

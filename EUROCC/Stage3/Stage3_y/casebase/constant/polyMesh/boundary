@@ -1,0 +1,131 @@
+/*--------------------------------*- C++ -*----------------------------------*\
+| =========                 |                                                 |
+| \\      /  F ield         | OpenFOAM: The Open Source CFD Toolbox           |
+|  \\    /   O peration     | Version:  4.1                                   |
+|   \\  /    A nd           | Web:      www.OpenFOAM.org                      |
+|    \\/     M anipulation  |                                                 |
+\*---------------------------------------------------------------------------*/
+FoamFile
+{
+    version     2.0;
+    format      ascii;
+    class       polyBoundaryMesh;
+    location    "constant/polyMesh";
+    object      boundary;
+}
+// * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * //
+
+15
+(
+    inlet
+    {
+        type            mappedPatch;
+        inGroups        1(mappedPatch);
+        nFaces          900;
+        startFace       5855550;
+        sampleMode      nearestPatchFace;
+        sampleRegion    region0;
+        samplePatch     outlet;
+        offsetMode      uniform;
+        offset          (0.487 0 0);
+    }
+    outlet
+    {
+        type            patch;
+        nFaces          900;
+        startFace       5856450;
+    }
+    top
+    {
+        type            symmetryPlane;
+        inGroups        1(symmetryPlane);
+        nFaces          20700;
+        startFace       5857350;
+    }
+    bottom
+    {
+        type            wall;
+        inGroups        1(wall);
+        nFaces          22050;
+        startFace       5878050;
+    }
+    bf1_left
+    {
+        type            wall;
+        inGroups        1(wall);
+        nFaces          900;
+        startFace       5900100;
+    }
+    bf1_right
+    {
+        type            wall;
+        inGroups        1(wall);
+        nFaces          900;
+        startFace       5901000;
+    }
+    bf2_left
+    {
+        type            wall;
+        inGroups        1(wall);
+        nFaces          900;
+        startFace       5901900;
+    }
+    bf2_right
+    {
+        type            wall;
+        inGroups        1(wall);
+        nFaces          900;
+        startFace       5902800;
+    }
+    bf3_left
+    {
+        type            wall;
+        inGroups        1(wall);
+        nFaces          900;
+        startFace       5903700;
+    }
+    bf3_right
+    {
+        type            wall;
+        inGroups        1(wall);
+        nFaces          900;
+        startFace       5904600;
+    }
+    back
+    {
+        type            wall;
+        inGroups        1(wall);
+        nFaces          18750;
+        startFace       5905500;
+    }
+    front
+    {
+        type            wall;
+        inGroups        1(wall);
+        nFaces          18750;
+        startFace       5924250;
+    }
+    walls
+    {
+        type            wall;
+        inGroups        1(wall);
+        nFaces          17100;
+        startFace       5943000;
+    }
+    baffles
+    {
+        type            wall;
+        inGroups        1(wall);
+        nFaces          0;
+        startFace       5960100;
+    }
+    defaultFaces
+    {
+        type            empty;
+        inGroups        1(empty);
+        nFaces          10350;
+        startFace       5960100;
+    }
+)
+
+// ************************************************************************* //

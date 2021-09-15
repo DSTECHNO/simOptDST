@@ -1,0 +1,139 @@
+#!/bin/sh
+cd ${0%/*} || exit 1    # run from this directory
+
+application=`getApplication`
+# Source tutorial run functions
+. $WM_PROJECT_DIR/bin/tools/RunFunctions
+
+cp -r system.flow/ system
+topoSet -dict system/topoSetDict.1
+refineMesh -overwrite
+topoSet -dict system/topoSetDict.2
+subsetMesh -overwrite baffle1 -patch baffles
+
+#remove a zero size patch
+createPatch -overwrite
+
+cp -r 0.flow/* 0/
+
+#set facezones at the middle and inlet of each port to cumpute flux 
+runApplication topoSet -dict system/topoSetDict.port1Mid
+rm -rf log.topoSet
+runApplication topoSet -dict system/topoSetDict.port2Mid
+rm -rf log.topoSet
+runApplication topoSet -dict system/topoSetDict.port3Mid
+rm -rf log.topoSet
+runApplication topoSet -dict system/topoSetDict.port4Mid
+rm -rf log.topoSet
+runApplication topoSet -dict system/topoSetDict.port5Mid
+rm -rf log.topoSet
+runApplication topoSet -dict system/topoSetDict.port6Mid
+rm -rf log.topoSet
+runApplication topoSet -dict system/topoSetDict.port7Mid
+rm -rf log.topoSet
+runApplication topoSet -dict system/topoSetDict.port8Mid
+rm -rf log.topoSet
+runApplication topoSet -dict system/topoSetDict.port9Mid
+rm -rf log.topoSet
+#set facezones at the middle of each opening on the baffles to cumpute flux 
+runApplication topoSet -dict system/topoSetDict.opening1Mid
+rm -rf log.topoSet
+runApplication topoSet -dict system/topoSetDict.opening2Mid
+rm -rf log.topoSet
+runApplication topoSet -dict system/topoSetDict.opening3Mid
+
+cp constant/FlowProp/* constant/
+
+#run simpleFoam in parallel
+
+decomposePar
+
+mpirun -n $1 simpleFoam -parallel
+
+reconstructPar -latestTime
+
+rm -rf processor* postProcessing/ 0/
+
+#Now tracer starts
+
+#convert 0.tracer/ to 0/
+
+cp -r 0.tracer/ 0
+
+#Take U.gz and nut.gz from latestTime and copy to 0 folder
+
+latestTime=$(foamListTimes -latestTime | tail -n 1)
+
+cp -r $latestTime/U* 0/
+
+cp -r $latestTime/nut* 0/
+
+#remove latestTime
+
+rm -rf $latestTime system/
+
+#Create system/ directory from system.tracer
+
+cp -r system.tracer/ system
+
+#remove flow properties for flow and add Tracer properties
+
+rm constant/g constant/t*
+
+cp constant/TracerProp/transportProperties constant/
+
+#create controldDict for injection
+
+cp system/controlDict.injection system/controlDict
+
+#create volume to measure the concentration
+
+topoSet -dict system/topoSetDict 
+
+#run my_scalarTransportFoam41 in parallel
+
+decomposePar
+
+mpirun -n $1 my_scalarTransportFoam41 -parallel
+
+reconstructPar -latestTime
+
+rm -rf processor*
+
+#create controlDict for tracer from controlDict.tracer
+
+cp system/controlDict.tracer system/controlDict
+
+#turn the injection off
+
+changeDictionary
+
+#run my_scalarTransportFoam41 in parallel
+
+decomposePar
+
+mpirun -n $1 my_scalarTransportFoam41 -parallel
+
+reconstructPar -latestTime
+
+rm -rf processor*
+
+#obtain C (concentration) readings for python evaluation
+
+sed 1,4d postProcessing/ChamberOut/0/volRegion.dat | sed 's/^[ ^t]*//' > C.txt
+
+sed 1,4d postProcessing/ChamberOut/5/volRegion.dat | sed 's/^[ ^t]*//' >> C.txt
+
+#Evaluate the obtained C (concentration) data to print desired indexes
+
+#python EF.py
+
+
+
+
+
+
+
+
+
+

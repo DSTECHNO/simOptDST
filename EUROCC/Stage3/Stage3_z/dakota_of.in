@@ -1,0 +1,70 @@
+# Usage:
+#   dakota -i xxx.in -o run.out > stdout.out
+
+
+################################################################################
+environment
+    	tabular_data
+        tabular_data_file = 'table_out.dat'
+    	#custom_annotated header eval_id	#No interface column	
+################################################################################
+    
+
+
+################################################################################    
+method
+       	conmin_frcg	    
+		max_iterations = 100
+		convergence_tolerance = 1e-5
+
+		
+
+################################################################################
+
+
+  
+################################################################################
+variables
+	continuous_design = 3
+	cdv_initial_point	0.125	0.125	0.125
+	cdv_lower_bounds	0.08	0.1	0.09
+	cdv_upper_bounds	0.125	0.125	0.125
+	cdv_descriptor	'z111'	'z211'	'z311'
+################################################################################
+
+
+
+################################################################################
+interface
+	fork
+	asynchronous
+	evaluation_concurrency = 1
+	analysis_driver = 'simulator_script'
+	parameters_file = 'params.in'
+	results_file    = 'results.out'
+	work_directory directory_tag
+
+        copy_files = 'templatedir/*'
+
+	  
+# uncomment to leave params.in and results.out files in work_dir subdirectories
+ 	named 'workdir' file_save  directory_save
+	aprepro
+	  
+# when using conmin_frcg (above) with analytic_gradients (below), 
+# need to turn off the active set vector as the interface does not parse it.
+ 	deactivate active_set_vector
+################################################################################
+
+
+
+################################################################################	  
+responses
+
+objective_functions = 1
+numerical_gradients
+fd_gradient_step_size =  0.1
+no_hessians
+sense 'min'
+################################################################################
+

@@ -1,0 +1,226 @@
+/*--------------------------------*- C++ -*----------------------------------*\
+| =========                 |                                                 |
+| \\      /  F ield         | OpenFOAM: The Open Source CFD Toolbox           |
+|  \\    /   O peration     | Version:  2.3.1                                 |
+|   \\  /    A nd           | Web:      www.OpenFOAM.org                      |
+|    \\/     M anipulation  |                                                 |
+\*---------------------------------------------------------------------------*/
+FoamFile
+{
+    version     2.0;
+    format      ascii;
+    class       dictionary;
+    object      topoSetDict;
+}
+// * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * //
+#include        "ports/portscoords"
+
+actions
+(
+    //port 1 zone
+    {
+        name    zonep1;
+        type    cellSet;
+        action  new;
+        source  boxToCell;
+        sourceInfo
+        {
+            box (0.12 $y11 0) (0.127 $y12 0.23);
+        }
+    }
+
+    {
+        name    zonep1;
+        type    cellZoneSet;
+        action  new;
+        source  setToCellZone;
+        sourceInfo
+        {
+            set zonep1;
+        }
+    }
+    //port 2 zone
+    {
+        name    zonep2;
+        type    cellSet;
+        action  new;
+        source  boxToCell;
+        sourceInfo
+        {
+            box (0.12 $y21 0) (0.127 $y22 0.23);
+        }
+    }
+
+    {
+        name    zonep2;
+        type    cellZoneSet;
+        action  new;
+        source  setToCellZone;
+        sourceInfo
+        {
+            set zonep2;
+        }
+    } 
+    //ending 1 zone
+    {
+        name    zonee1;
+        type    cellSet;
+        action  new;
+        source  boxToCell;
+        sourceInfo
+        {
+            box (0.12 0.18 0) (0.127 0.21 0.23);
+        }
+    }
+
+    {
+        name    zonee1;
+        type    cellZoneSet;
+        action  new;
+        source  setToCellZone;
+        sourceInfo
+        {
+            set zonee1;
+        }
+    }
+
+    //port 3 zone
+    {
+        name    zonep3;
+        type    cellSet;
+        action  new;
+        source  boxToCell;
+        sourceInfo
+        {
+            box (0.24 $y31 0) (0.247 $y32 0.23);
+        }
+    }
+
+    {
+        name    zonep3;
+        type    cellZoneSet;
+        action  new;
+        source  setToCellZone;
+        sourceInfo
+        {
+            set zonep3;
+        }
+    } 
+
+    //port 4 zone
+    {
+        name    zonep4;
+        type    cellSet;
+        action  new;
+        source  boxToCell;
+        sourceInfo
+        {
+            box (0.24 $y41 0) (0.247 $y42 0.23);
+        }
+    }
+
+    {
+        name    zonep4;
+        type    cellZoneSet;
+        action  new;
+        source  setToCellZone;
+        sourceInfo
+        {
+            set zonep4;
+        }
+    }
+
+    //ending 2 zone
+    {
+        name    zonee2;
+        type    cellSet;
+        action  new;
+        source  boxToCell;
+        sourceInfo
+        {
+            box (0.24 0 0) (0.247 0.03 0.23);
+        }
+    }
+
+    {
+        name    zonee2;
+        type    cellZoneSet;
+        action  new;
+        source  setToCellZone;
+        sourceInfo
+        {
+            set zonee2;
+        }
+    } 
+
+    //port 5 zone
+    {
+        name    zonep5;
+        type    cellSet;
+        action  new;
+        source  boxToCell;
+        sourceInfo
+        {
+            box (0.36 $y11 0) (0.367 $y12 0.23);
+        }
+    }
+
+    {
+        name    zonep5;
+        type    cellZoneSet;
+        action  new;
+        source  setToCellZone;
+        sourceInfo
+        {
+            set zonep5;
+        }
+    } 
+
+    //port 6 zone
+    {
+        name    zonep6;
+        type    cellSet;
+        action  new;
+        source  boxToCell;
+        sourceInfo
+        {
+            box (0.36 $y21 0) (0.367 $y22 0.23);
+        }
+    }
+
+    {
+        name    zonep6;
+        type    cellZoneSet;
+        action  new;
+        source  setToCellZone;
+        sourceInfo
+        {
+            set zonep6;
+        }
+    }    
+
+    //ending 3 zone
+    {
+        name    zonee3;
+        type    cellSet;
+        action  new;
+        source  boxToCell;
+        sourceInfo
+        {
+            box (0.36 0.18 0) (0.367 0.21 0.23);
+        }
+    }
+
+    {
+        name    zonee3;
+        type    cellZoneSet;
+        action  new;
+        source  setToCellZone;
+        sourceInfo
+        {
+            set zonee3;
+        }
+    }                                         
+);
+
+// ************************************************************************* //
