@@ -1,4 +1,4 @@
-# EUROCC Phase 2 (Optimization for slot width and slot height separately)                                 
+# EUROCC Phase 3 (Optimization for slot placement)                                 
  
 							GENERAL DESCRIPTIONS
 
@@ -23,8 +23,6 @@
 7.	It is necessary to use dakota_cleanup file to delete all optimization results.
 
 
-
-![Phase2](https://user-images.githubusercontent.com/90314532/133221259-5f75a5c5-db23-436b-8aae-aed7b756dcef.gif)
 
 
 Design and Simulation Technologies Inc. (DSTECH)
