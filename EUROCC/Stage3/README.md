@@ -27,6 +27,8 @@ In the third phase, a total of six variables were optimized, including three-var
 In the first step of the third phase, the slots in the z-axis are kept constant and the placement of the slots in the y-axis is optimized.
 In the second step, optimization was made in the z-axis according to the results obtained from the y-axis.
 
+![phase3](https://user-images.githubusercontent.com/90314532/133415951-48d8e6a4-54de-44bf-b034-082ee13dc54f.gif)
+
 Design and Simulation Technologies Inc. (DSTECH)
     
 http://dstechno.net/
