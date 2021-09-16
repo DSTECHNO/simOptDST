@@ -13,3 +13,9 @@ Stage1: Slot size is optimized based on the variation of diagonal length (both y
 Stage2: Width and height of the slots are optimized separately.
 
 Stage3: Locations of the slots are optimized for the dimensions obtained from Stage 2.
+
+#Licence
+
+Copyright 2021 Design and Simulation Technologies Inc.
+
+Distributed using the GNU General Public License (GPL), version 3; see the LICENSE file for details.
