@@ -1,4 +1,4 @@
-# EUROCC Phase 1 (Slot size optimization with variation of diagonal length)                                 
+# Stage 1: Optimization of width and height of slots                                 
  
 							GENERAL DESCRIPTIONS
 
