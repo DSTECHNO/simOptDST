@@ -14,7 +14,7 @@ Stage2: Width and height of the slots are optimized separately.
 
 Stage3: Locations of the slots are optimized for the dimensions obtained from Stage 2.
 
-#Licence
+# Licence
 
 Copyright 2021 Design and Simulation Technologies Inc.
 
