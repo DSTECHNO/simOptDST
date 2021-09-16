@@ -1,4 +1,4 @@
-# EUROCC Phase 3 (Optimization for slot placement)                                 
+# EUROCC Phase 3: Optimization of slot locations                                 
  
 							GENERAL DESCRIPTIONS
 
