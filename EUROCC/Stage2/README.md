@@ -1,4 +1,4 @@
-# EUROCC Phase 2 (Optimization for slot width and slot height separately)                                 
+# Stage 2: Optimization of width and hitght of the slots separately.                                 
  
 							GENERAL DESCRIPTIONS
 
