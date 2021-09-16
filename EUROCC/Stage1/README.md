@@ -1,4 +1,4 @@
-# Stage 1: Optimization of width and height of slots                                 
+# Stage 1: Optimization of width and height of the slots                                 
  
 							GENERAL DESCRIPTIONS
 
