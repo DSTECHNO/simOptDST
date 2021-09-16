@@ -1,4 +1,4 @@
-# Stage 3: Optimization of slot locations                                 
+# Stage 3: Optimization of the locations of the slots.                                 
  
 							GENERAL DESCRIPTIONS
 
