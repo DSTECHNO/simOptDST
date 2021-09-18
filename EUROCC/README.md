@@ -20,6 +20,8 @@ Prof. Dr. Ender Demirel
 
 Mustafa Kuzay
 
+Nazhmiddin Nasyrlayev
+
 # Licence
 
 Copyright 2021 Design and Simulation Technologies Inc.
