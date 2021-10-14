@@ -16,11 +16,11 @@ Stage3: Locations of the slots are optimized for the dimensions obtained from St
 
 # Developers
 
-Prof. Dr. Ender Demirel
-
 Mustafa Kuzay
 
 Nazhmiddin Nasyrlayev
+
+Prof. Dr. Ender Demirel
 
 # Licence
 
